@@ -1,0 +1,564 @@
+@import url('https://fonts.googleapis.com/css?family=Quicksand:100,400,500,700|Roboto:400,400i,500,700');
+/* Importando fonte */
+
+/*
+    ESTILIZAÇÃO /// GRUPO-05
+    PROJETO PITAIYA
+
+    " -> nome(s)_da(s)_página(s)" indica as páginas que o elemento está sendo utilizado.
+*/
+
+/* Configuração geral */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+.hidden {
+    display: none;
+  }
+  #dropdown-toggle {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    padding: 0;
+  }
+  #dropdown-toggle i {
+    background-color: transparent;
+    transition: transform 0.2s ease-in-out;
+  }
+
+  .notification {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+  }
+  
+  .notification-menu {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    z-index: 1;
+    min-width: 250px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-top: none;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .notification-menu li {
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  .notification-menu li:last-child {
+    border-bottom: none;
+  }
+  
+  .notification-menu a {
+    color: black;
+    text-decoration: none;
+  }
+  
+  .notification-menu p {
+    font-size: 12px;
+    color: #a9a9a9;
+    margin: 0;
+  }
+  
+  #dropdown-toggle {
+    color: #fff;
+  }
+
+ 
+
+/* Notificação ícone -> atividades */
+span.notification {
+    float: left;
+    margin-right: 10px;
+    position: relative;
+    cursor: pointer;
+}
+
+/* Notificações contagem -> atividades */
+span.notification-count {
+    position: absolute;
+    height: 11px;
+    width: 11px;
+    background: #F44336;
+    border-radius: 100%;
+    font-size: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    top: -14px;
+    right: -8px;
+    text-shadow: none;
+    font-weight: bold;
+    padding: 10px;
+}
+
+/* Input de pesquisa -> atividades */
+input[type="search"] {
+    border: none;
+    width: 300px;
+    line-height: inherit;
+    font-size: 15px;
+    color: #000;
+    padding: 5px 10px;
+    font-family: inherit;
+    border-radius: 2px;
+    display: block;
+}
+
+/* Seção -> main */
+section {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    padding: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #fff;
+}
+
+/* Conteúdo da página inicial -> main */
+.content {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Conteúdo da página inicial: caixa de texto h2 -> main */
+.content .textBox h2 {
+    color: #333;
+    font-size: 4em;
+    line-height: 1.4em;
+    font-weight: 500;
+}
+
+/* Conteúdo da página inicial: caixa de texto h2 span -> main */
+.content .textBox h2 span {
+    color: #46748F;
+    font-size: 1.2em;
+    font-weight: 900;
+}
+
+/* Entre agora da página inicial -> main */
+.content .textBox a {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 8px 20px;
+    background: #46748F;
+    color: #fff;
+    border-radius: 40px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-decoration: none;
+    text-align: center;
+}
+
+/* Círculo da página inicial */
+.circle {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #46748F;
+    clip-path: circle(600px at right 800px);
+}
+
+/* Corpo -> login */
+.login-body {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #46748F;
+}
+
+/* Container -> login */
+.login-container {
+    position: relative;
+    max-width: 430px;
+    width: 100%;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Formulário do container -> login */
+.login-container .form {
+    padding: 30px;
+}
+
+/* Título do formulário do container -> login */
+.login-container .form .title {
+    position: relative;
+    font-size: 27px;
+    font-weight: 600;
+}
+
+
+/* Input -> login */
+.input-field input {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    padding: 0 35px;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    border-bottom: 2px solid #ccc;
+    border-top: 2px solid transparent;
+}
+
+/* Campo do input do formulário -> login */
+.form .input-field {
+    position: relative;
+    margin-top: 50px;
+    width: 100%;
+    margin-top: 30px;
+}
+
+/* Foco no input -> login */
+.input-field input:is(:focus, :valid) {
+    border-bottom-color: #4070f4;
+}
+
+/* Foco no ícone -> login */
+.input-field input:is(:focus, :valid)~i {
+    color: #4070f4;
+}
+
+/* Ícones do input -> login */
+.input-field i {
+    position: relative;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    color: #999;
+    font-size: 23px;
+    transition: all 0.2s ease;
+}
+
+/* Botão "Entrar" -> login */
+.btn {
+    background-color: royalblue;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition-duration: 0.3s;
+    margin-left: 165px;
+    margin-bottom: 40px;
+}
+
+/* Botão "Entrar" :hover -> login */
+.btn:hover {
+    background-color: blue;
+}
+
+/* Título :before -> login */
+.forms .title::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 3px;
+    width: 30px;
+    background-color: royalblue;
+    border-radius: 25px;
+}
+
+/* Corpo -> atividades */
+.atividades-body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    line-height: 1.2;
+    background-color: #fff;
+}
+
+
+/* Logo -> atividades */
+.logo h1 {
+    margin: 5px 0;
+    font-family: quicksand;
+    font-weight: 100;
+}
+
+/* Header -> atividades */
+.header-container-wrapper {
+    background: #46748F;
+    padding: 10px 20px;
+    color: rgba(255, 255, 255, 0.9);
+    text-shadow: 0.5px 0.5px 1px rgb(10, 70, 117);
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.49);
+    height: 95px;
+    position: relative;
+}
+
+/* Detalhes do usuário caixa principal -> atiidades */
+.user-detail {
+    float: right;
+    padding: 20px 0 0;
+    font-size: 16px;
+}
+
+/* Detalhes do usuário conteúdo -> atividades */
+.user-name-wrapper {
+    position: relative;
+    float: left;
+    margin-right: 15px;
+    cursor: pointer;
+}
+
+/* Detalhes do usuário <ul> -> atividades  */
+.user-name-wrapper ul {
+    opacity: 100;
+}
+
+/* Detalhes do usuário <ul> -> atividades */
+.user-name-wrapper ul {
+    margin: 0;
+    list-style: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: rgba(5, 17, 23, 0.68);
+    padding: 5px 0;
+    border-radius: 2px;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.9);
+}
+
+/* Detalhes do usuário <ul> <li> -> atividades */
+.user-name-wrapper ul li {
+    white-space: nowrap;
+    cursor: pointer;
+    font-size: 12px;
+    padding: 5px 10px;
+}
+
+/* Detalhes do usuário :hover -> atividades */
+.user-name-wrapper ul li:hover {
+    background: rgba(4, 64, 72, 0.79);
+}
+
+/* Detalhes do usuário ícone -> atividades */
+.user-detail i.fa.fa-user {
+    float: left;
+    margin-right: 5px;
+    font-size: 14px;
+    top: 2px;
+    position: relative;
+}
+
+/* Configurações ícone -> atividades */
+.user-detail i.fa.fa-cog {
+    font-size: 20px;
+    cursor: pointer;
+}
+
+/* Barra lateral -> atividades */
+.left-sidebar {
+    background: #333333;
+    height: calc(100vh - 95px);
+    width: 250px;
+    box-shadow: 0 4px 4px #000;
+    position: relative;
+    overflow: hidden;
+    right: 415px;
+}
+
+/* Barra lateral <ul> -> atividades */
+.left-sidebar>ul {
+    margin: 0;
+    list-style: none;
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 15px;
+    line-height: 1.5;
+    padding: 10px 0;
+    position: relative;
+    z-index: 999;
+    height: calc(100vh - 200px);
+    overflow-y: scroll;
+    overflow-x: hidden;
+    padding-right: 17px;
+    width: 285px;
+}
+
+/* Barra lateral <ul> <li> <a> <i> -> atividades */
+.left-sidebar ul li a i {
+    margin-right: 8px;
+}
+
+/* Barra lateral <ul> <li> <a> -> atividades */
+.left-sidebar ul li a {
+    padding: 15px 20px;
+    cursor: pointer;
+    font-size: 15px;
+    display: block;
+    padding-right: 40px;
+}
+
+/* Barra lateral <ul> <li> <a> :hover -> atividades */
+.left-sidebar ul li a:hover {
+    background: #B0E1FF;
+    color: rgba(0, 0, 0, 0.8);
+}
+
+/* Barra lateral :after -> atividades */
+.left-sidebar:after {
+    background-image: url(https://media.tumblr.com/tumblr_mavlglPrzP1r836v5.jpg);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    background-size: cover;
+    opacity: 0.6;
+}
+
+/* <ul> classe list e <ul> classe list <ul> classe list -> atividades */
+ul.list,
+ul.list ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -o-user-select: none;
+}
+
+/* <ul> classe list <ul> */
+ul.list ul {
+    position: relative;
+    margin-left: 29px;
+}
+
+/* <ul> classe list <ul> :before -> atividades */
+ul.list ul:before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0px;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    border-left: 1px solid #ccc;
+}
+
+/* <ul> classe list <li> -> atividades */
+
+ul.list li {
+    position: relative;
+    margin: 0;
+    color: #ccc;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 13px;
+    font-weight: normal;
+    line-height: 20px;
+}
+
+/* <ul> classe lista <li> <a> -> atividades */
+ul.list li a {
+    position: relative;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 20px;
+}
+
+/* <ul> classe list <ul> <li> :before -> atividades */
+ul.list ul li:before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 14px;
+    left: 0;
+    width: 12px;
+    height: 0;
+    border-top: 1px solid #ccc;
+}
+
+/* <ul> classe list <ul> e <li> :last-child:before -> atividades */
+ul.list ul li:last-child:before {
+    top: 14px;
+    bottom: 0;
+    height: auto;
+    background: #333;
+}
+
+/* <ul> classe list <ul> <li> <a> */
+ul.list ul li a {
+    padding: 5px 20px;
+    font-size: 12px;
+    color: #adadad;
+    padding-right: 40px;
+}
+
+/* <ul> classe list <ul> <ul> <li> -> atividades */
+ul.list ul ul li {
+    color: black;
+}
+
+/* <ul> classe list <ul> <ul> -> atividades */
+ul.list ul ul {
+    margin-left: 22px;
+    margin-top: 0px;
+}
+
+/* GRID CSS */
+
+[class*="col-"] {
+    float: left;
+    padding: 0 15px;
+}
+
+/* Header da esquerda -> atividades */
+.col-4 {
+    width: 33.33%;
+}
+
+/* Header da direita -> atividades */
+.col-8 {
+    width: 66.66%;
+}
+
+/* Header da direita classe carry-right -> atividades */
+.carry-right {
+    float: right;
+}
+
+.row {
+    margin: 0 -15px;
+    width: auto;
+}
+
+.arrow-down {
+    color: #fff;
+  }
+
+  .logo{
+    position: relative;
+    max-width: 80px;
+  }

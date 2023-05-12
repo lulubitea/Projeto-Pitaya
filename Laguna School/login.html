@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/839c816596.js" crossorigin="anonymous"></script>
+    <link rel="shortcut icon" href="./imagens/ico-laguna-school.ico" type="image/x-icon">
+    <title>Login</title>
+</head>
+<body class="loginBody">
+    <div id="login-container" class="container">
+        <div class="header">
+            <h1>Login</h1>
+        </div>
+
+        <div id="error">Login inválido</div>
+
+        <form id="signin" class="login-form">
+            <div class="input-icons">
+                <i class="fa-sharp fa-solid fa-envelope"></i>
+                <input type="text" class="login-input" placeholder="E-mail" required>
+                <i class="fa-sharp fa-solid fa-lock"></i>
+                <input type="password" class="login-input" placeholder="Senha" required>
+                <i id="showPassword" class="fa-sharp fa-solid fa-eye" onclick="showPassword()"></i>
+            </div>
+            <a href="https://youtu.be/oxwAB3SECtc">Esqueci minha senha</a>
+            <button type="submit" onclick="logar()" disabled>Acessar</button>
+        </form>
+    </div>
+    
+    <script src="login.js"></script>
+</body>
+</html>

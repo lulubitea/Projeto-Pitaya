@@ -1,0 +1,515 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
+
+/* Estilização padrão do site */
+
+html {
+    height: 100%;
+    width: 100%;
+    margin: 0%;
+    padding: 0%;
+    overflow-x: hidden;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    background-color: whitesmoke;
+}
+
+
+
+button[type="submit"] {
+    background: linear-gradient(to right, rgba(5, 17, 23, 0.68), #46748F);
+    color: white;
+    border-radius: 30px;
+    width: 100%;
+    border: none;
+    outline: none;
+    padding: 8px;
+    font-size: 24px;
+    margin-top: 40px;
+    cursor: pointer;
+}
+
+button:disabled {
+    opacity: 75%;
+    cursor: not-allowed;
+}
+
+button:enabled {
+    opacity: 100%;
+}
+
+input[type="checkbox"] {
+    cursor: pointer;
+    opacity: 0;
+}
+
+
+
+a {
+    text-decoration: none;
+    color: white;
+    padding-left: 5px;
+}
+
+
+th,
+td {
+    text-align: center;
+    padding-right: 5px;
+    padding-top: 5px;
+}
+
+label {
+    background: linear-gradient(to right, rgba(5, 17, 23, 0.68), #46748F);
+    border-radius: 6px;
+    padding: 5px;
+    right: 25px;
+    bottom: 5px;
+    position: relative;
+}
+
+.container {
+    background-color: rgba(0, 0, 0, .75);
+    padding: 6px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+    border-radius: 5px;
+    box-shadow: inset -1em 0px 4em -1em black;
+}
+
+.header {
+    position: relative;
+    text-align: center;
+    padding: 10px 29px;
+    border-radius: 5px;
+    background: linear-gradient(to right, rgba(5, 17, 23, 0.68), #46748F);
+    margin-top: 20px;
+    color: white;
+    user-select: none;
+}
+
+#error {
+    color: red;
+    font-size: 1em;
+    margin-top: 1em;
+    display: none;
+}
+
+.input-icons i {
+    position: absolute;
+}
+
+.input-icons {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.fa-envelope {
+    padding: 10px;
+    min-width: 40px;
+    top: 38px;
+}
+
+.fa-lock {
+    padding: 10px;
+    min-width: 40px;
+    top: 109px;
+}
+
+.fa-eye,
+.fa-eye-slash {
+    position: absolute;
+    padding: 10px;
+    min-width: 40px;
+    top: 109px;
+    right: 0px;
+    cursor: pointer;
+    opacity: 75%;
+}
+
+#hidePasswordButton {
+    margin: 0;
+    padding: 0;
+}
+
+.hide {
+    display: none;
+}
+
+
+/* Estilização do login */
+
+.loginBody {
+    background-image: url('imagens/home-page/foto2.jpg');
+    background-size: cover;
+}
+
+.login-form {
+    position: absolute;
+    margin-top: 80px;
+    transition: .5s;
+    width: 300px;
+    height: 400px;
+}
+
+.login-input {
+    border: none;
+    margin-top: 40px;
+    border-radius: 60px;
+    padding: 8px 0 8px 35px;
+    outline: none;
+    width: 100%;
+    font-size: 16px;
+}
+
+#login-container {
+    width: 350px;
+    height: 350px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+#signin {
+    left: 25px;
+}
+
+/* Estilização portal */
+
+#portal-container {
+    width: 95%;
+    height: 80%;
+    overflow: auto;
+    top: 14%;
+    left: 2.5%;
+    padding: 20px;
+    position: relative;
+    overflow: auto;
+}
+
+/*Atividades*/
+
+.task {
+    margin-top: 1%;
+}
+
+.task-form-group {
+    margin: 15px;
+    width: 100%;
+}
+
+.form-control {
+    display: block;
+    border: none;
+    border-radius: 6px;
+    outline: none;
+    width: 100%;
+    min-height: 2em;
+}
+
+.task-table {
+    width: fit-content;
+    background-color: whitesmoke;
+    font-size: 1.3em;
+}
+
+
+#tasks-container,
+#tasks-container-teacher,
+#tasks-container-student,
+#tasks-container-representative {
+    position: relative;
+    margin-top: 3%;
+    width: 95%;
+    height: 75%;
+    background-color: rgba(0, 0, 0, 0);
+    overflow: auto;
+}
+
+#calendar,
+#create-task,
+#edit-task,
+#mathematics,
+#portuguese,
+#physical-education,
+#biology,
+#physics,
+#chemistry,
+#english,
+#art,
+#philosophy,
+#sociology,
+#advanced-topics,
+#info-task {
+    width: 100vw;
+    height: 100vh;
+    display: none;
+}
+
+#tasks-container-teacher,
+#tasks-container-student,
+#tasks-container-representative,
+#create-task,
+#create-task-li {
+    display: none;
+}
+
+.edit-button,
+.delete-button,
+.accept-button,
+.decline-button,
+.info-button {
+    display: none;
+}
+
+/*Página inicial*/
+
+#home-page {
+    width: 100vw;
+    height: 100vh;
+}
+
+.home-page-image {
+    width: 100%;
+    height: 30em;
+}
+
+.home-page-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.home-page-image h1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 5em;
+}
+
+.text {
+    margin-top: 1em;
+    background-color: whitesmoke;
+    padding: 0.5em;
+    width: 100%;
+    border: 0.3em solid #46748F;
+    left: 150px;
+}
+
+.text h2 {
+    text-align: center;
+}
+
+.text p {
+    text-indent: 1em;
+}
+
+/*Calendário*/
+
+.month {
+    padding: 70px 25px;
+    width: 100%;
+    background: #46748F;
+    text-align: center;
+}
+
+.month ul {
+    margin: 0;
+    padding: 0;
+}
+
+.month ul li {
+    color: white;
+    font-size: 20px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    list-style: none;
+}
+
+.month .prev {
+    float: left;
+    padding-top: 10px;
+    cursor: pointer;
+}
+
+.month .next {
+    float: right;
+    padding-top: 10px;
+    cursor: pointer;
+}
+
+.weekdays {
+    margin: 0;
+    padding: 10px 0;
+    background-color: #ddd;
+    width: 100%;
+}
+
+.weekdays li {
+    display: inline-block;
+    width: 13.6%;
+    color: #666;
+    text-align: center;
+    font-size: 2em;
+}
+
+.days {
+    padding: 10px 0;
+    background: #eee;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.days li {
+    list-style-type: none;
+    display: inline-block;
+    width: 13.6%;
+    text-align: center;
+    margin-bottom: 5px;
+    font-size: 1.5em;
+    color: black;
+}
+
+.days li .active {
+    padding: 5px;
+    background: #46748F;
+    color: white !important
+}
+
+/* Estilização da header do Portal */
+#portal-header {
+    position: absolute;
+    background-color: #46748F;
+    width: 100%;
+    height: 8%;
+    top: 0px;
+    left: 0px;
+    display: flex;
+    padding: 0 1em;
+    justify-content: space-between;
+}
+
+.sidebar-btn {
+    background-color: rgba(0, 0, 0, 0);
+    font-size: 2em;
+    cursor: pointer;
+    color: white;
+    border: none;
+}
+
+#profile-options {
+    float: right;
+    display: flex;
+    align-items: center;
+    padding-right: 10px;
+}
+
+
+#profile-options img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 1.4em;
+    cursor: pointer;
+}
+
+#profile-options p{
+    color: white;
+    margin-right: 0.2em;
+}
+
+#options {
+    position: absolute;
+    right: 0;
+    top: 100%;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    margin-right: 0.4em;
+}
+
+#options ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+#options li {
+    padding: 10px;
+}
+
+#options li:hover {
+    background-color: rgba(136, 136, 136, 0.75);
+}
+
+#options a {
+    text-decoration: none;
+    color: #333;
+}
+
+
+/* Estilização da Barra Lateral */
+
+#sidebar-container {
+    position: fixed;
+    width: 0px;
+    height: calc(100vh - 8%);
+    top: 8%;
+    left: -0.6%;
+    border-radius: 0px;
+    z-index: 1;
+    transition: 0.5s;
+
+}
+
+.sidebar-items {
+    width: 100%;
+    overflow: auto;
+}
+
+/* Esconder scrollbar para Chrome, Safari and Opera */
+.sidebar-items::-webkit-scrollbar {
+    display: none;
+}
+
+/* Esconder scrollbar para IE, Edge and Firefox */
+.sidebar-items {
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
+}
+
+.sidebar-items ul {
+    list-style: none;
+}
+
+.sidebar-items li {
+    margin-top: 6%;
+    padding: 6%;
+    color: white;
+    font-weight: bolder;
+    font-size: 115%;
+    cursor: pointer;
+}
+
+.sidebar-items li:hover {
+    background-color: rgba(136, 136, 136, 0.75);
+}

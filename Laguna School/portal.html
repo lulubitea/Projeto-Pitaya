@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/839c816596.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="./imagens/ico-laguna-school.ico" type="image/x-icon">
+    <title>Atividades</title>
+</head>
+
+<body class="portalBody" onload="setPermissions()">
+    <!-- Header -->
+    <div id="portal-header">
+        <div id="menuToggle">
+            <button class="sidebar-btn" onclick="activateSidebar()">&#9776;</button>
+        </div>
+
+        <div id="profile-options">
+            <p>Nome de usuário</p>
+            <img src="./imagens/foto de perfil.png" alt="Imagem de perfil" onclick="showOptions()">
+            <div id="options" class="hide">
+                <ul>
+                    <li><a href="#">Perfil</a></li>
+                    <li><a href="#">Notas</a></li>
+                    <li><a href="#">Configurações</a></li>
+                    <li><a href="#">Sair</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Barra lateral -->
+    <div id="sidebar-container" class="container">
+        <div class="sidebar-items">
+            <ul>
+                <li onclick="setCurrentItemContainer('home-page')"><i class="fa fa-house"></i>Página Inicial</li>
+                <li onclick="setCurrentItemContainer('calendar')"><i class="fa fa-calendar-days"></i>Calendário</li>
+                <li id="create-task-li" onclick="setCurrentItemContainer('create-task')"><i
+                        class="fa fa-graduation-cap"></i>Criar Atividade</li>
+                <li onclick="setCurrentItemContainer('mathematics')"><i class="fa fa-graduation-cap"></i>Matemática</li>
+                <li onclick="setCurrentItemContainer('portuguese')"><i class="fa fa-graduation-cap"></i>Língua
+                    Portuguesa</li>
+                <li onclick="setCurrentItemContainer('physical-education')"><i class="fa fa-graduation-cap"></i>Educação
+                    Física</li>
+                <li onclick="setCurrentItemContainer('biology')"><i class="fa fa-graduation-cap"></i>Biologia</li>
+                <li onclick="setCurrentItemContainer('physics')"><i class="fa fa-graduation-cap"></i>Física</li>
+                <li onclick="setCurrentItemContainer('chemistry')"><i class="fa fa-graduation-cap"></i>Química</li>
+                <li onclick="setCurrentItemContainer('english')"><i class="fa fa-graduation-cap"></i>Inglês</li>
+                <li onclick="setCurrentItemContainer('art')"><i class="fa fa-graduation-cap"></i>Artes</li>
+                <li onclick="setCurrentItemContainer('philosophy')"><i class="fa fa-graduation-cap"></i>Filosofia</li>
+                <li onclick="setCurrentItemContainer('sociology')"><i class="fa fa-graduation-cap"></i>Sociologia</li>
+                <li onclick="setCurrentItemContainer('advanced-topics')"><i class="fa fa-graduation-cap"></i>Tópicos
+                    Avançados</li>
+            </ul>
+
+        </div>
+    </div>
+
+    <!-- Containers dos items -->
+    <div id="item-container-div">
+        <div id="home-page">
+            <div id="portal-container">
+                <div class="home-page-image">
+                    <img src="imagens/home-page/foto2.jpg" alt="Imagem">
+                    <h1>Laguna School</h1>
+                </div>
+
+                <div class="header">
+                    <h1>NOVIDADES!</h1>
+                </div>
+
+                <div class="text">
+                    <h2>Novo Site Escolar</h2>
+                    <br>
+                    <p>O Laguna School é uma escola renomada que acaba de lançar seu novo site para gerenciamento das
+                        atividades dos alunos. Com essa nova plataforma online, os estudantes poderão acessar seus
+                        horários, tarefas e notas em um só lugar, facilitando a organização de seus estudos.</p>
+                        <br>
+                    <p>O novo site também conta com recursos exclusivos para os pais e responsáveis, permitindo que eles
+                        acompanhem o desempenho de seus filhos na escola de forma mais fácil e conveniente. Além disso,
+                        o Laguna School investiu em uma interface intuitiva e amigável, garantindo que todos possam
+                        utilizar o site com facilidade.</p>
+                        <br>
+                    <p>Com essa novidade, o Laguna School se posiciona como uma escola moderna e inovadora, que busca
+                        constantemente oferecer a melhor experiência de aprendizado para seus alunos. Não perca tempo e
+                        confira o novo site do Laguna School agora mesmo!</p>
+                </div>
+            </div>
+        </div>
+
+        <div id="calendar">
+            <div id="portal-container" class="container">
+                <div class="month">
+                    <ul>
+                        <li class="prev">&#10094;</li>
+                        <li class="next">&#10095;</li>
+                        <li>
+                            <h1>Maio</h1><br><span style="font-size:1em">2023</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <ul class="weekdays">
+                    <li>Dom</li>
+                    <li>Seg</li>
+                    <li>Ter</li>
+                    <li>Qua</li>
+                    <li>Qui</li>
+                    <li>Sex</li>
+                    <li>Sáb</li>
+                </ul>
+
+                <ul class="days">
+                    <li style="color: gray;">30</li>
+                    <li>1</li>
+                    <li>2</li>
+                    <li>3</li>
+                    <li>4</li>
+                    <li>5</li>
+                    <li>6</li>
+                    <li>7</li>
+                    <li>8</li>
+                    <li>9</li>
+                    <li>10</li>
+                    <li>11</li>
+                    <li><span class="active">12</span></li>
+                    <li>13</li>
+                    <li>14</li>
+                    <li>15</li>
+                    <li>16</li>
+                    <li>17</li>
+                    <li>18</li>
+                    <li>19</li>
+                    <li>20</li>
+                    <li>21</li>
+                    <li>22</li>
+                    <li>23</li>
+                    <li>24</li>
+                    <li>25</li>
+                    <li>26</li>
+                    <li>27</li>
+                    <li>28</li>
+                    <li>29</li>
+                    <li>30</li>
+                    <li>31</li>
+                    <li style="color: gray;">1</li>
+                    <li style="color: gray;">2</li>
+                    <li style="color: gray;">3</li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="create-task">
+            <div id="portal-container" class="container">
+                <div class="header">
+                    <h1>Criar Atividade</h1>
+                </div>
+
+                <div id="tasks-container" class="container">
+                    <div class="header">
+                        <h1>Informações</h1>
+                    </div>
+
+                    <form>
+                        <div class="task-form-group">
+                            <label for="taskSubject">Matéria</label>
+                            <select name="subject" id="taskSubject" class="form-control">
+                                <option value="">Escolha uma disciplina</option>
+                                <option value="mathematics">Matemática</option>
+                                <option value="portuguese">Português</option>
+                                <option value="physical-education">Educação Física</option>
+                                <option value="biology">Biologia</option>
+                                <option value="physics">Física</option>
+                                <option value="chemistry">Química</option>
+                                <option value="english">Inglês</option>
+                                <option value="art">Arte</option>
+                                <option value="philosophy">Filosofia</option>
+                                <option value="sociology">Sociologia</option>
+                                <option value="advanced-topics">Tópicos Avançados</option>
+                            </select>
+                        </div>
+
+                        <div class="task-form-group">
+                            <label for="taskTitle">Título</label>
+                            <input type="text" id="taskTitle" class="form-control" placeholder="Digite aqui" required>
+                        </div>
+
+                        <div class="task-form-group">
+                            <label for="taskData">Data</label>
+                            <input type="date" id="taskData" class="form-control" required>
+                        </div>
+
+                        <div class="task-form-group">
+                            <label for="taskHour">Horário</label>
+                            <input type="time" id="taskHour" class="form-control" required>
+                        </div>
+
+                        <div class="task-form-group">
+                            <label for="taskDescription">Descrição</label>
+                            <textarea type="text" id="taskDescription" class="form-control" rows="10"
+                                placeholder="Digite aqui"></textarea>
+                        </div>
+
+                        <div class="task-form-group">
+                            <label for="taskFile">Arquivo</label>
+                            <input type="file" id="taskFile" class="form-control">
+                        </div>
+
+                        <button type="submit">Enviar</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div id="edit-task">
+            <div id="portal-container" class="container">
+                <div class="header">
+                    <h1>Editar atividade</h1>
+                </div>
+
+                <div id="tasks-container" class="container">
+                    <div class="header">
+                        <h1>Informações</h1>
+                    </div>
+
+                    <form>
+
+                        <div class="task-form-group">
+                            <label for="editTaskTitle">Título</label>
+                            <select id="editTaskTitle" class="form-control">
+                            </select>
+                        </div>
+
+                        <div class="task-form-group">
+                            <label for="editTaskData">Data</label>
+                            <input type="date" id="editTaskData" class="form-control">
+                        </div>
+
+                        <div class="task-form-group">
+                            <label for="editTaskHour">Horário</label>
+                            <input type="time" id="editTaskHour" class="form-control">
+                        </div>
+
+                        <div class="task-form-group">
+                            <label for="editTaskDescription">Descrição</label>
+                            <textarea type="text" id="editTaskDescription" class="form-control" rows="10"
+                                placeholder="Digite aqui"></textarea>
+                        </div>
+
+                        <div class="task-form-group">
+                            <label for="editTaskFile">Arquivo</label>
+                            <input type="file" id="editTaskFile" class="form-control">
+                        </div>
+
+                        <button type="submit">Enviar</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div id="info-task">
+            <div id="portal-container" class="container">
+                <div class="header">
+                    <h1>Atividade</h1>
+                </div>
+
+                <div id="tasks-container" class="container">
+                    <div class="header">
+                        <h1>Informações</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="mathematics">
+            <div id="portal-container" class="container">
+                <div class="header">
+                    <h1>Atividades - Matemática</h1>
+                </div>
+                <div id="tasks-container-teacher" class="container">
+                </div>
+
+                <div id="tasks-container-student" class="container">
+                </div>
+
+                <div id="tasks-container-representative" class="container">
+                </div>
+            </div>
+        </div>
+
+        <div id="portuguese">
+            <div id="portal-container" class="container">
+                <div class="header">
+                    <h1>Atividades - Português</h1>
+                </div>
+                <div id="tasks-container-teacher" class="container">
+                </div>
+
+                <div id="tasks-container-student" class="container">
+                </div>
+
+                <div id="tasks-container-representative" class="container">
+                </div>
+            </div>
+        </div>
+
+        <div id="physical-education">
+            <div id="portal-container" class="container">
+                <div class="header">
+                    <h1>Atividades - Educação Física</h1>
+                </div>
+                <div id="tasks-container-teacher" class="container">
+                </div>
+
+                <div id="tasks-container-student" class="container">
+                </div>
+
+                <div id="tasks-container-representative" class="container">
+                </div>
+            </div>
+        </div>
+
+        <div id="biology">
+            <div id="portal-container" class="container">
+                <div class="header">
+                    <h1>Atividades - Biologia</h1>
+                </div>
+                <div id="tasks-container-teacher" class="container">
+                </div>
+
+                <div id="tasks-container-student" class="container">
+                </div>
+
+                <div id="tasks-container-representative" class="container">
+                </div>
+            </div>
+        </div>
+
+        <div id="physics">
+            <div id="portal-container" class="container">
+                <div class="header">
+                    <h1>Atividades - Física</h1>
+                </div>
+                <div id="tasks-container-teacher" class="container">
+                </div>
+
+                <div id="tasks-container-student" class="container">
+                </div>
+
+                <div id="tasks-container-representative" class="container">
+                </div>
+            </div>
+        </div>
+
+        <div id="chemistry">
+            <div id="portal-container" class="container">
+                <div class="header">
+                    <h1>Atividades - Química</h1>
+                </div>
+                <div id="tasks-container-teacher" class="container">
+                </div>
+
+                <div id="tasks-container-student" class="container">
+                </div>
+
+                <div id="tasks-container-representative" class="container">
+                </div>
+            </div>
+        </div>
+
+        <div id="english">
+            <div id="portal-container" class="container">
+                <div class="header">
+                    <h1>Atividades - Inglês</h1>
+                </div>
+                <div id="tasks-container-teacher" class="container">
+                </div>
+
+                <div id="tasks-container-student" class="container">
+                </div>
+
+                <div id="tasks-container-representative" class="container">
+                </div>
+            </div>
+        </div>
+
+        <div id="art">
+            <div id="portal-container" class="container">
+                <div class="header">
+                    <h1>Atividades - Artes</h1>
+                </div>
+                <div id="tasks-container-teacher" class="container">
+                </div>
+
+                <div id="tasks-container-student" class="container">
+                </div>
+
+                <div id="tasks-container-representative" class="container">
+                </div>
+            </div>
+        </div>
+
+        <div id="philosophy">
+            <div id="portal-container" class="container">
+                <div class="header">
+                    <h1>Atividades - Filosofia</h1>
+                </div>
+                <div id="tasks-container-teacher" class="container">
+                </div>
+
+                <div id="tasks-container-student" class="container">
+                </div>
+
+                <div id="tasks-container-representative" class="container">
+                </div>
+            </div>
+        </div>
+
+        <div id="sociology">
+            <div id="portal-container" class="container">
+                <div class="header">
+                    <h1>Atividades - Sociologia</h1>
+                </div>
+                <div id="tasks-container-teacher" class="container">
+                </div>
+
+                <div id="tasks-container-student" class="container">
+                </div>
+
+                <div id="tasks-container-representative" class="container">
+                </div>
+            </div>
+        </div>
+
+        <div id="advanced-topics">
+            <div id="portal-container" class="container">
+                <div class="header">
+                    <h1>Avisos - Tópicos Avançados</h1>
+                </div>
+                <div id="tasks-container-teacher" class="container">
+                </div>
+
+                <div id="tasks-container-student" class="container">
+                </div>
+
+                <div id="tasks-container-representative" class="container">
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="portal.js"></script>
+</body>
+
+</html>
