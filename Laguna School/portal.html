@@ -11,7 +11,7 @@
     <title>Atividades</title>
 </head>
 
-<body class="portalBody" onload="setPermissions()">
+<body class="portalBody" onload="setPermissions(); activateSidebar()">
     <!-- Header -->
     <div id="portal-header">
         <div id="menuToggle">
@@ -19,7 +19,7 @@
         </div>
 
         <div id="profile-options">
-            <p>Nome de usuário</p>
+            <p>Nome de usuário<br>Cargo</p>
             <img src="./imagens/foto de perfil.png" alt="Imagem de perfil" onclick="showOptions()">
             <div id="options" class="hide">
                 <ul>
@@ -52,8 +52,7 @@
                 <li onclick="setCurrentItemContainer('art')"><i class="fa fa-graduation-cap"></i>Artes</li>
                 <li onclick="setCurrentItemContainer('philosophy')"><i class="fa fa-graduation-cap"></i>Filosofia</li>
                 <li onclick="setCurrentItemContainer('sociology')"><i class="fa fa-graduation-cap"></i>Sociologia</li>
-                <li onclick="setCurrentItemContainer('advanced-topics')"><i class="fa fa-graduation-cap"></i>Tópicos
-                    Avançados</li>
+                <li onclick="setCurrentItemContainer('advanced-topics')" style="display: none;"><i class="fa fa-graduation-cap"></i>Bons Estudos</li>
             </ul>
 
         </div>
@@ -230,8 +229,7 @@
 
                         <div class="task-form-group">
                             <label for="editTaskTitle">Título</label>
-                            <select id="editTaskTitle" class="form-control">
-                            </select>
+                            <input type="text" id="editTaskTitle" class="form-control">
                         </div>
 
                         <div class="task-form-group">
@@ -262,15 +260,14 @@
         </div>
 
         <div id="info-task">
-            <div id="portal-container" class="container">
+            <div id="floating-container" class="container">
+                <i class="fa-solid fa-down-left-and-up-right-to-center fa-2xl" style="color: #ffffff;" onclick="hideTaskInfo()"></i>
                 <div class="header">
-                    <h1>Atividade</h1>
+                    <h1>Informações</h1>
                 </div>
 
                 <div id="tasks-container" class="container">
-                    <div class="header">
-                        <h1>Informações</h1>
-                    </div>
+                    
                 </div>
             </div>
         </div>
@@ -280,7 +277,7 @@
                 <div class="header">
                     <h1>Atividades - Matemática</h1>
                 </div>
-                <div id="tasks-container-teacher" class="container">
+                <div id="tasks-container-teacher" class="container">    
                 </div>
 
                 <div id="tasks-container-student" class="container">
@@ -436,19 +433,6 @@
         </div>
 
         <div id="advanced-topics">
-            <div id="portal-container" class="container">
-                <div class="header">
-                    <h1>Avisos - Tópicos Avançados</h1>
-                </div>
-                <div id="tasks-container-teacher" class="container">
-                </div>
-
-                <div id="tasks-container-student" class="container">
-                </div>
-
-                <div id="tasks-container-representative" class="container">
-                </div>
-            </div>
         </div>
     </div>
     <script src="portal.js"></script>

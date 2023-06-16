@@ -4,7 +4,7 @@ const passwordInput = form.querySelector('input[type="password"]'); //Input da s
 const errorText = document.getElementById('error') //Elemento mensagem de erro
 const showPasswordIcon = document.querySelector('#showPassword') //Elemento do olho de mostrar senha)
 
-//Logins de professor e aluno temporário até criar um banco de dados para isso
+//Logins de professor e aluno
 const loginInfo = {
     mathematicsTeacher: {
         email: 'ProfessorMatematica',
@@ -118,6 +118,7 @@ inputs.forEach(function (input) {
     });
 });
 
+//Previne que a página recarregue ao enviar o formulário
 form.addEventListener('submit', function (event) {
     event.preventDefault();
 });

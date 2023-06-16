@@ -3,8 +3,6 @@
 /* Estilização padrão do site */
 
 html {
-    height: 100%;
-    width: 100%;
     margin: 0%;
     padding: 0%;
     overflow-x: hidden;
@@ -18,13 +16,9 @@ html {
 }
 
 body {
-    width: 100vw;
-    height: 100vh;
     display: flex;
     background-color: whitesmoke;
 }
-
-
 
 button[type="submit"] {
     background: linear-gradient(to right, rgba(5, 17, 23, 0.68), #46748F);
@@ -86,7 +80,7 @@ label {
     align-items: center;
     overflow: hidden;
     border-radius: 5px;
-    box-shadow: inset -1em 0px 4em -1em black;
+    box-shadow: -1em 0px 4em -1em black;
 }
 
 .header {
@@ -94,10 +88,16 @@ label {
     text-align: center;
     padding: 10px 29px;
     border-radius: 5px;
-    background: linear-gradient(to right, rgba(5, 17, 23, 0.68), #46748F);
+    background: #46748F;
     margin-top: 20px;
     color: white;
     user-select: none;
+}
+
+#login-container .header {
+    /* background: linear-gradient(to right, rgba(5, 17, 23, 0.68), #46748F); */
+    background: none;
+    font-size: 1.5em;
 }
 
 #error {
@@ -148,11 +148,68 @@ label {
     display: none;
 }
 
+/* Estilização da página inicial */
+
+.content {
+    position: absolute;
+    width: 50vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.5em;
+    margin: 10vw;
+}
+
+.content .textBox h2 {
+    color: #333;
+    font-size: 4em;
+    line-height: 1.4em;
+    font-weight: 500;
+}
+
+.content .textBox h2 span {
+    color: #46748F;
+    font-size: 1.2em;
+    font-weight: 900;
+}
+
+.content .textBox a {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 8px 20px;
+    background: #46748F;
+    color: #fff;
+    border-radius: 40px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-decoration: none;
+    text-align: center;
+}
+
+.circle {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #46748F;
+    clip-path: circle(35vw at right 100vh);
+}
+
+@media screen and (max-width: 1280px) and (max-height: 720px) {
+    .content {
+        width: 50vw;
+        font-size: 1em;
+        margin: 10vw;
+    }
+}
 
 /* Estilização do login */
 
 .loginBody {
     background-image: url('imagens/home-page/foto2.jpg');
+    background-blend-mode: multiply;
+    background-color: rgba(0, 0, 0, 0.1);
     background-size: cover;
 }
 
@@ -196,19 +253,58 @@ label {
     overflow: auto;
     top: 14%;
     left: 2.5%;
-    padding: 20px;
     position: relative;
     overflow: auto;
+    background-color: whitesmoke;
+    transition: ease-in-out 0.3s;
+}
+
+#info-task {
+    z-index: 1;
+    position: fixed;
+    overflow: auto;
+}
+
+#floating-container {
+    box-shadow: none;
+    background-color: rgba(5, 17, 23, 0.68);
+    position: fixed;
+    top: 25%;
+    height: 65%;
+    transition: ease-in-out 0.3s;
 }
 
 /*Atividades*/
 
 .task {
     margin-top: 1%;
+    max-width: 100%;
+}
+
+.task-table {
+    display: inline-block;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.25),
+        0 0 10px rgba(0, 0, 0, 0.25),
+        0 0 10px rgba(0, 0, 0, 0.25),
+        0 0 10px rgba(0, 0, 0, 0.25);
+    padding: 0.5em;
+    border-radius: 1em;
+    font-size: 1.3em;
+    max-width: 100%;
+    max-height: fit-content;
+}
+
+.task-table td {
+    max-width: 16em;
+    overflow: auto;
+}
+
+.task-table td::-webkit-scrollbar {
+    display: none;
 }
 
 .task-form-group {
-    margin: 15px;
+    margin: 1em;
     width: 100%;
 }
 
@@ -221,12 +317,6 @@ label {
     min-height: 2em;
 }
 
-.task-table {
-    width: fit-content;
-    background-color: whitesmoke;
-    font-size: 1.3em;
-}
-
 
 #tasks-container,
 #tasks-container-teacher,
@@ -234,9 +324,62 @@ label {
 #tasks-container-representative {
     position: relative;
     margin-top: 3%;
-    width: 95%;
-    height: 75%;
-    background-color: rgba(0, 0, 0, 0);
+    width: 100%;
+    height: 100%;
+    background: none;
+    border: none;
+    overflow: auto;
+    box-shadow: none;
+}
+
+#tasks-container-teacher .container,
+#tasks-container-student .container,
+#tasks-container-representative .container {
+    background: transparent;
+    border: transparent;
+}
+
+#tasks-container form {
+    width: 80%;
+}
+
+#tasks-container ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f5f5f5;
+    padding: 20px;
+    width: 75%;
+}
+
+#tasks-container ul li {
+    color: black;
+    font-size: 1.5em;
+    margin-top: 1em;
+    max-width: 75%;
+    list-style: none;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1em;
+}
+
+#tasks-container span.label {
+    font-weight: bolder;
+    margin-bottom: 0.5em;
+    background-color: #46748F;
+    border-radius: 5px;
+    padding: 5px;
+    max-width: fit-content;
+}
+
+#tasks-container a {
+    color: red;
+}
+
+#tasks-container span {
+    max-width: 100%;
     overflow: auto;
 }
 
@@ -253,11 +396,19 @@ label {
 #art,
 #philosophy,
 #sociology,
-#advanced-topics,
-#info-task {
+#advanced-topics {
     width: 100vw;
     height: 100vh;
     display: none;
+}
+
+#info-task {
+    display: none;
+}
+
+.fa-down-left-and-up-right-to-center{
+    margin-left: 95%;
+    margin-top: 2%;
 }
 
 #tasks-container-teacher,
@@ -404,6 +555,7 @@ label {
     display: flex;
     padding: 0 1em;
     justify-content: space-between;
+    align-items: center;
 }
 
 .sidebar-btn {
@@ -421,6 +573,14 @@ label {
     padding-right: 10px;
 }
 
+#profile-options p {
+    margin: 0;
+    text-align: right;
+}
+
+#profile-options #occupation {
+    color: lightgreen;
+}
 
 #profile-options img {
     width: 40px;
@@ -430,7 +590,7 @@ label {
     cursor: pointer;
 }
 
-#profile-options p{
+#profile-options p {
     color: white;
     margin-right: 0.2em;
 }
@@ -464,19 +624,19 @@ label {
     color: #333;
 }
 
-
 /* Estilização da Barra Lateral */
 
 #sidebar-container {
-    position: fixed;
+    position: absolute;
     width: 0px;
-    height: calc(100vh - 8%);
-    top: 8%;
+    height: calc(100vh - 16%);
+    top: 12%;
     left: -0.6%;
-    border-radius: 0px;
+    border-radius: 0px 5px 5px 0px;
     z-index: 1;
     transition: 0.5s;
-
+    opacity: 0%;
+    background-color: rgba(0, 0, 0, .75);
 }
 
 .sidebar-items {
@@ -508,6 +668,8 @@ label {
     font-weight: bolder;
     font-size: 115%;
     cursor: pointer;
+    overflow: hidden;
+    transition: ease-in-out 0.9s;
 }
 
 .sidebar-items li:hover {
